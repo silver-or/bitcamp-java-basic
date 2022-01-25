@@ -1,8 +1,16 @@
 package com.example.demo.calc;
 
-/*
-* 숫자 2개와 연산자 1개를 받아서 계산하는 계산기를 코딩하시오.
-* */
+/**
+ * packageName: com.example.demo.calc
+ * fileName   : CalcApp.java
+ * author     : 최은아
+ * date       : 2022-01-24
+ * desc       : 숫자 2개와 연산자 1개를 받아서 계산하는 계산기 앱
+ * ================================
+ * DATE             AUTHOR        NOTE
+ * ================================
+ * 2022-01-24       최은아       최초 생성
+ */
 
 public class CalcApp {
     static String CALC = "계산기";

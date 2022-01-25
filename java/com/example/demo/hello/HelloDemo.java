@@ -1,5 +1,18 @@
 package com.example.demo.hello;
 
+/**
+ * packageName: com.example.demo.hello
+ * fileName   : HelloDemo.java
+ * author     : 최은아
+ * date       : 2022-01-24
+ * desc       : HelloApp을 실행하는 컨트롤러
+ * ================================
+ * DATE             AUTHOR        NOTE
+ * ================================
+ * 2022-01-24       최은아       최초 생성
+ */
+
+
 import java.util.Scanner;
 
 public class HelloDemo {
