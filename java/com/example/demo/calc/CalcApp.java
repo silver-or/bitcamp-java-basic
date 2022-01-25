@@ -13,7 +13,7 @@ package com.example.demo.calc;
  */
 
 public class CalcApp {
-    static String CALC = "계산기";
+    public static String CALC = "계산기";
     private int num1 = 0;
     private int num2 = 0;
     private String opcode = "";
@@ -23,11 +23,15 @@ public class CalcApp {
         this.opcode = opcode;
         this.num2 = num2;
 
-        if (opcode.equals("+")) { return String.format("%d %s %d = %d", this.num1, opcode, this.num2, this.num1 + this.num2); }
-        else if (opcode.equals("-")) { return String.format("%d %s %d = %d", this.num1, opcode, this.num2, this.num1 - this.num2); }
-        else if (opcode.equals("*")) { return String.format("%d %s %d = %d", this.num1, opcode, this.num2, this.num1 * this.num2); }
-        else if (opcode.equals("/")) { return String.format("%d %s %d = %d", this.num1, opcode, this.num2, this.num1 / this.num2); }
-        else if (opcode.equals("%")) { return String.format("%d %s %d = %d", this.num1, opcode, this.num2, this.num1 % this.num2); }
+        int result = 0;
+
+        if (opcode.equals("+")) { result = num1 + num2; }
+        else if (opcode.equals("-")) { result = num1 - num2; }
+        else if (opcode.equals("*")) { result = num1 * num2; }
+        else if (opcode.equals("/")) { result = num1 / num2; }
+        else if (opcode.equals("%")) { result = num1 % num2; }
         else { return "잘못된 연산자입니다."; }
+
+        return String.format("%d %s %d = %d", this.num1, opcode, this.num2, result);
     }
 }

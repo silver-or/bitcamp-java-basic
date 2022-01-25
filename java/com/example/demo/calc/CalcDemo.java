@@ -27,7 +27,7 @@ public class CalcDemo {
         System.out.print("첫 번째 값 입력 : ");
         num1 = scanner.nextInt();
 
-        System.out.print("연산자 입력 : ");
+        System.out.print("연산자 입력 (+, -, *, /, %) : ");
         scanner.nextLine();
         opcode = scanner.nextLine();
 
@@ -35,6 +35,6 @@ public class CalcDemo {
         num2 = scanner.nextInt();
 
         String result = calcApp.calc(num1, opcode, num2);
-        System.out.println(result);
+        System.out.println("연산 결과 : " + result);
     }
 }
