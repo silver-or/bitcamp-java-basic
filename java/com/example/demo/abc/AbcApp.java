@@ -13,7 +13,7 @@ package com.example.demo.abc;
  */
 public class AbcApp {
     public String getAbc() {
-        String result = String.format("abc");
-        return result;
+        String abc = String.format("");
+        return abc;
     }
 }

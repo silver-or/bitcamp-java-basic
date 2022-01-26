@@ -40,7 +40,7 @@ public class GradeApp {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
-        total = kor + eng + math;
+        total = this.kor + this.eng + this.math;
         avg = total / 3;
         pass = (avg >= 60) ? "합격" : "불합격";
         String grade = String.format("   * ########## %s ######## \n" +

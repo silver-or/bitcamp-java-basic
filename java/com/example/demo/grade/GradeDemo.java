@@ -30,7 +30,7 @@ public class GradeDemo {
         System.out.print("수학 : ");
         int math = scanner.nextInt();
 
-        String grade = gradeApp.getGrade(name, kor, eng, math);
-        System.out.println(grade);
+        String result = gradeApp.getGrade(name, kor, eng, math);
+        System.out.println(result);
     }
 }
