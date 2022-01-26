@@ -16,6 +16,7 @@ public class LoginApp {
     // 객체 : state(상태)와 behavior(기능)의 집합
     // 실행당하는 대상
     static String APPNAME = "Login APP";
+    static String PASSWORD = "abc";
     private String id;
     private String pw;
     private String name;
@@ -24,6 +25,13 @@ public class LoginApp {
         this.id = id;
         this.pw = pw;
         this.name = name;
-        return String.format("ID %s, PW %s, Name %s", this.id, this.pw, this.name);
+        String result = "";
+        if(this.pw.equals(LoginApp.PASSWORD)) {
+            result = String.format("%s 님의 비번은 %s 가 맞습니다. 로그인 성공", this.name, this.pw);
+        } else {
+            result = String.format("%s 님의 ID는 맞고, 비번은 %s 가 아닙니다. 로그인 실패", this.id, this.pw);
+        }
+        return result;
+
     }
 }

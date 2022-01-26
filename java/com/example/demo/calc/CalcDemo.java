@@ -21,18 +21,15 @@ public class CalcDemo {
         CalcApp calcApp = new CalcApp();
         System.out.println(CalcApp.CALC);
 
-        int num1, num2;
-        String opcode = "";
-
         System.out.print("첫 번째 값 입력 : ");
-        num1 = scanner.nextInt();
+        int num1 = scanner.nextInt();
 
         System.out.print("연산자 입력 (+, -, *, /, %) : ");
         scanner.nextLine();
-        opcode = scanner.nextLine();
+        String opcode = scanner.nextLine();
 
         System.out.print("두 번째 값 입력 : ");
-        num2 = scanner.nextInt();
+        int num2 = scanner.nextInt();
 
         String result = calcApp.calc(num1, opcode, num2);
         System.out.println("연산 결과 : " + result);

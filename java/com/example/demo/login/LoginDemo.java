@@ -23,7 +23,6 @@ public class LoginDemo {
 
         LoginApp loginApp = new LoginApp();
         System.out.println(LoginApp.APPNAME);
-        System.out.println(loginApp.APPNAME);
 
         System.out.print("아이디 입력 : ");
         String id = scanner.next();
