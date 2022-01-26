@@ -13,7 +13,7 @@ package com.example.demo.hello;
  */
 
 public class HelloApp {
-    static String APPNAME = "Hello APP";
+    static String HELLO_APP = "Hello APP";
     private String name;
     private int age;
 

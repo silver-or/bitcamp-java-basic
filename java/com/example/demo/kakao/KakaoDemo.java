@@ -20,7 +20,7 @@ public class KakaoDemo {
         Scanner scanner = new Scanner(System.in); // 다운
 
         KakaoApp kakaoApp = new KakaoApp();
-        System.out.println(KakaoApp.APPNAME);
+        System.out.println(KakaoApp.KAKAO_APP);
 //        System.out.println(kakaoApp.APPNAME);
 
         String telno;

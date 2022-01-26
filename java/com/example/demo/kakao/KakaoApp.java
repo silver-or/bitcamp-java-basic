@@ -18,7 +18,7 @@ package com.example.demo.kakao;
 * */
 
 public class KakaoApp {
-    static String APPNAME = "Kakao APP";
+    static String KAKAO_APP = "Kakao APP";
     private String telno;
     private String message;
 

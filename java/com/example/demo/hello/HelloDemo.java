@@ -20,7 +20,7 @@ public class HelloDemo {
         Scanner scanner = new Scanner(System.in);
 
         HelloApp helloApp = new HelloApp();
-        System.out.println(HelloApp.APPNAME);
+        System.out.println(HelloApp.HELLO_APP);
 
         String name;
         int age;

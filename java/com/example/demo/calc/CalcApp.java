@@ -25,6 +25,7 @@ public class CalcApp {
 
         int result = 0;
 
+/*
         // if() {}
         if (opcode.equals("+")) { result = num1 + num2; }
         else if (opcode.equals("-")) { result = num1 - num2; }
@@ -32,8 +33,17 @@ public class CalcApp {
         else if (opcode.equals("/")) { result = num1 / num2; }
         else if (opcode.equals("%")) { result = num1 % num2; }
         else { return "잘못된 연산자입니다."; }
+*/
 
         // switch() {}
+        switch(opcode) {
+            case "+" : result = num1 + num2; break;
+            case "-" : result = num1 - num2; break;
+            case "*" : result = num1 * num2; break;
+            case "/" : result = num1 / num2; break;
+            case "%" : result = num1 % num2; break;
+            default : return "잘못된 연산자입니다.";
+        }
 
         String text = String.format("%d %s %d = %d", this.num1, opcode, this.num2, result);
 
