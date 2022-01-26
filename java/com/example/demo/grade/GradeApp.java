@@ -27,6 +27,7 @@ package com.example.demo.grade;
  * */
 public class GradeApp {
     public static String GRADE_TITLE = "성적표";
+    private String name;
     private int kor;
     private int eng;
     private int math;
@@ -34,23 +35,24 @@ public class GradeApp {
     private int avg;
     private String pass;
 
-    public int getTotal(int kor, int eng, int math) {
+    public String getGrade(String name, int kor, int eng, int math) {
+        this.name = name;
         this.kor = kor;
         this.eng = eng;
         this.math = math;
         total = kor + eng + math;
-        return total;
-    }
-
-    public int getAvg(int total) {
-        this.total = total;
-        avg = this.total / 3;
-        return avg;
-    }
-
-    public String getGrade(int avg) {
-        this.avg = avg;
-        pass = (this.avg >= 60) ? "합격" : "불합격";
-        return pass;
+        avg = total / 3;
+        pass = (avg >= 60) ? "합격" : "불합격";
+        String grade = String.format("   * ########## %s ######## \n" +
+                        "   * 이름: %s\n" +
+                        "   * > 국어: %d점 \n" +
+                        "   * > 영어: %d점 \n" +
+                        "   * > 수학: %d점 \n" +
+                        "   * 총점: %d점 \n" +
+                        "   * 평균(정수): %d점 \n" +
+                        "   * 합격여부: %s \n" +
+                        "   * #######################",
+                GRADE_TITLE, name, kor, eng, math, total, avg, pass);
+        return grade;
     }
 }
