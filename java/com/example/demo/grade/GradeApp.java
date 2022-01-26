@@ -31,15 +31,17 @@ public class GradeApp {
     private int kor;
     private int eng;
     private int math;
-    private int total;
-    private int avg;
-    private String pass;
 
     public String getGrade(String name, int kor, int eng, int math) {
         this.name = name;
         this.kor = kor;
         this.eng = eng;
         this.math = math;
+
+        int total;
+        int avg;
+        String pass;
+
         total = this.kor + this.eng + this.math;
         avg = total / 3;
         pass = (avg >= 60) ? "합격" : "불합격";
@@ -52,7 +54,7 @@ public class GradeApp {
                         "   * 평균(정수): %d점 \n" +
                         "   * 합격여부: %s \n" +
                         "   * #######################",
-                GRADE_TITLE, name, kor, eng, math, total, avg, pass);
+                GRADE_TITLE, this.name, this.kor, this.eng, this.math, total, avg, pass);
         return grade;
     }
 }
