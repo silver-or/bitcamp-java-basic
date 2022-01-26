@@ -25,20 +25,24 @@ public class LoginApp {
         this.id = id;
         this.pw = pw;
         this.name = name;
-        String result = "";
 /*
-
         if(this.pw.equals(PASSWORD)) {
             result = String.format("%s 님의 비번은 %s 가 맞습니다. 로그인 성공", this.name, this.pw);
         } else {
             result = String.format("%s 님의 ID는 맞고, 비번은 %s 가 아닙니다. 로그인 실패", this.id, this.pw);
         }
 */
+/*
+        // switch-case : 단일 값 체크
+        // 식 2개
         switch(this.pw) {
             case "abc" : result = String.format("%s 님의 비번은 %s 가 맞습니다. 로그인 성공", this.name, this.pw); break;
             default : result = String.format("%s 님의 ID는 맞고, 비번은 %s 가 아닙니다. 로그인 실패", this.id, this.pw);
         }
-
-        return result;
+*/
+        // 3항 연산자 : T/F 구조
+        // 식 1개 (2배 빠름) → 메모리 사용 X
+        return (this.pw.equals(PASSWORD)) ? String.format("%s 님의 비번은 %s 가 맞습니다. 로그인 성공", this.name, this.pw)
+                    : String.format("%s 님의 ID는 맞고, 비번은 %s 가 아닙니다. 로그인 실패", this.id, this.pw);
     }
 }
