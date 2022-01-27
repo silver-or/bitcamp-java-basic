@@ -15,25 +15,10 @@ package com.example.demo.login;
 import java.util.Scanner;
 
 public class LoginDemo {
-    public static void main(String[] args) {
+    public String execute(String id, String pw, String name) {
         // demo 실행
         // control (톨제)
-
-        Scanner scanner = new Scanner(System.in);
-
         LoginApp loginApp = new LoginApp();
-        System.out.println(LoginApp.LOGIN_APP);
-
-        System.out.print("아이디 입력 : ");
-        String id = scanner.next();
-
-        System.out.print("비밀번호 입력 : ");
-        String pw = scanner.next();
-
-        System.out.print("이름 입력 : ");
-        String name = scanner.next();
-
-        String login = loginApp.login(id, pw, name);
-        System.out.println(login);
+        return loginApp.login(id, pw, name);
     }
 }

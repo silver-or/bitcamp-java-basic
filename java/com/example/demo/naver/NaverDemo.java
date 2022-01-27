@@ -17,15 +17,11 @@ public class NaverDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         NaverApp naverApp = new NaverApp();
-
         System.out.println(NaverApp.NAVER_APP);
-
         System.out.print("id : ");
         String id = scanner.next();
-
         System.out.print("pw : ");
         String pw = scanner.next();
-
         String result = naverApp.login(id, pw);
         System.out.println(result);;
     }

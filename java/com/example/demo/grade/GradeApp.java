@@ -37,11 +37,9 @@ public class GradeApp {
         this.kor = kor;
         this.eng = eng;
         this.math = math;
-
         int total = this.kor + this.eng + this.math;
         int avg = total / 3;
         String pass = (avg >= 60) ? "합격" : "불합격";
-
         String grade = String.format("   * ########## %s ######## \n" +
                         "   * 이름: %s\n" +
                         "   * > 국어: %d점 \n" +

@@ -15,7 +15,7 @@ package com.example.demo.login;
 public class LoginApp {
     // 객체 : state(상태)와 behavior(기능)의 집합
     // 실행당하는 대상
-    static String LOGIN_APP = "Login APP";
+    public static String LOGIN_APP = "Login APP";
     static String PASSWORD = "abc";
     private String id;
     private String pw;

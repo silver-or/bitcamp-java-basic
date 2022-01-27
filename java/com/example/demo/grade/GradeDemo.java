@@ -14,28 +14,8 @@ import java.util.Scanner;
  * 2022-01-26    최은아       최초 생성
  */
 public class GradeDemo {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public String execute(String name, int kor, int eng, int math) {
         GradeApp gradeApp = new GradeApp();
-
-        for(int i = 1; i < 3; i++) {
-            // 내부는 절차 지향적
-            System.out.println(i + "번 학생");
-
-            System.out.print("이름 : ");
-            String name = scanner.next();
-
-            System.out.print("국어 : ");
-            int kor = scanner.nextInt();
-
-            System.out.print("영어 : ");
-            int eng = scanner.nextInt();
-
-            System.out.print("수학 : ");
-            int math = scanner.nextInt();
-
-            String result = gradeApp.getGrade(name, kor, eng, math);
-            System.out.println(result);
-        }
+        return gradeApp.getGrade(name, kor, eng, math);
     }
 }
