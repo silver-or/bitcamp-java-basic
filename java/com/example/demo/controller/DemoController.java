@@ -42,24 +42,24 @@ public class DemoController {
                 case "0" :
                     System.out.println("Exit"); return;
                 case "1" :
-                    System.out.println(BmiApp.BMI_APP + "\n이름 : \n키 : \n몸무게 : \n");
-                    System.out.println(bmiDemo.execute(scanner.next(), scanner.nextDouble(), scanner.nextDouble()));
+                    System.out.println(BmiApp.BMI_APP + "\n이름 : \n키 : \n몸무게 : ");
+                    result = bmiDemo.execute(scanner.next(), scanner.nextDouble(), scanner.nextDouble());
                     break;
                 case "2" :
-                    System.out.println(CalcApp.CALC + "\n첫 번째 숫자 : \n연산자 : \n두 번째 숫자 : \n");
-                    System.out.println(calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt()));
+                    System.out.println(CalcApp.CALC + "\n첫 번째 숫자 : \n연산자 : \n두 번째 숫자 : ");
+                    result = calcDemo.execute(scanner.nextInt(), scanner.next(), scanner.nextInt());
                     break;
                 case "3" :
                     System.out.println(GoogleApp.GOOGLE_APP + "\nGoogle 검색 또는 URL 입력 : ");
-                    System.out.println(googleDemo.execute(scanner.next()));
+                    result = googleDemo.execute(scanner.next());
                     break;
                 case "4" :
-                    System.out.println(GradeApp.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : \n");
-                    System.out.println(gradeDemo.execute(scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt()));
+                    System.out.println(GradeApp.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : ");
+                    result = gradeDemo.execute(scanner.next(), scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
                     break;
                 case "5" :
-                    System.out.println(LoginApp.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : \n");
-                    System.out.println(loginDemo.execute(scanner.next(), scanner.next(), scanner.next()));
+                    System.out.println(LoginApp.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : ");
+                    result = loginDemo.execute(scanner.next(), scanner.next(), scanner.next());
                     break;
                 default :
                     result = "선택된 메뉴가 없습니다. 1~5 사이의 숫자를 입력해주세요.";
