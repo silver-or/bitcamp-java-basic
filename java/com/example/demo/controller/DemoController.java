@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.calc.CalcDemo;
+
 import java.util.Scanner;
 
 /**
@@ -16,17 +18,22 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        CalcDemo calcDemo = new CalcDemo();
         System.out.println("메뉴 선택");
-        for (int i=0; i<5; i++) {
-            String menu = "1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
+        while (true) {
+            String menu = "0.EXIT 1.BMI 2.CALC 3.SEARCH 4.GRADE 5.LOGIN";
             System.out.println(menu);
             String select = scanner.next();
             String result = "";
             switch (select) {
+                case "0" :
+                    System.out.println("Exit"); return;
                 case "1" :
                     result = "BMI"; break;
                 case "2" :
-                    result = "CALC"; break;
+                    result = "CALC";
+                    calcDemo.execute();
+                    break;
                 case "3" :
                     result = "SEARCH"; break;
                 case "4" :
