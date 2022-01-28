@@ -14,7 +14,7 @@ import com.example.demo.domain.BmiDTO;
  * 2022-01-25    최은아       최초 생성
  */
 public class BmiService {
-    public String getBMI(BmiDTO bmi) {
+    public String execute(BmiDTO bmi) {
         // Algorithm
         return String.format("%s님의 키 : %.2f 몸무게 : %.2f, bmi 지수는 정상입니다.", bmi.getName(), bmi.getHeight(), bmi.getWeight());
     }

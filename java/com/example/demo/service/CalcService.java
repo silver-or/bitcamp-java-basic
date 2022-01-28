@@ -14,7 +14,7 @@ import com.example.demo.domain.CalcDTO;
  * 2022-01-24       최은아       최초 생성
  */
 public class CalcService {
-    public String getCalc(CalcDTO calc) {
+    public String execute(CalcDTO calc) {
         int result = 0;
         switch (calc.getOpcode()) {
             case "+":

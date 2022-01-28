@@ -17,7 +17,7 @@ import com.example.demo.domain.KakaoDTO;
 //import com.example.demo.kakao.KakaoApp // 같은 패키지는 import 생략 가능
 
 public class KakaoService {
-    public String kakao(KakaoDTO kakao) {
+    public String execute(KakaoDTO kakao) {
         return String.format("telno %s, message %s", kakao.getTelno(), kakao.getMessage());
     }
 }

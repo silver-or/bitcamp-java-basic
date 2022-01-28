@@ -15,7 +15,7 @@ import com.example.demo.domain.LoginDTO;
  */
 
 public class LoginService {
-    public String login(LoginDTO login) {
+    public String execute(LoginDTO login) {
         // demo 실행
         // control (톨제)
         return (login.getPw().equals("abc")) ? String.format("%s 님의 비번은 %s 가 맞습니다. 로그인 성공", login.getName(), login.getPw())

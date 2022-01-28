@@ -14,7 +14,7 @@ import com.example.demo.domain.GoogleDTO;
  * 2022-01-25    최은아       최초 생성
  */
 public class GoogleService {
-    public String search(GoogleDTO google) {
+    public String execute(GoogleDTO google) {
         return String.format("\'%s\'을(를) 검색한 결과입니다.", google.getWord());
     }
 }

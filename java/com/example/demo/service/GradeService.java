@@ -14,7 +14,7 @@ import com.example.demo.domain.GradeDTO;
  * 2022-01-26    최은아       최초 생성
  */
 public class GradeService {
-    public String getGrade(GradeDTO grade) {
+    public String execute(GradeDTO grade) {
 //        System.out.println("GradeService에 들어옴");
 //        System.out.println(grade.toString());
 

@@ -55,19 +55,19 @@ public class DemoController {
                     bmi.setName(scanner.next());
                     bmi.setHeight(scanner.nextDouble());
                     bmi.setWeight(scanner.nextDouble());
-                    result = bmiService.getBMI(bmi);
+                    result = bmiService.execute(bmi);
                     break;
                 case "2":
                     System.out.println(CalcDTO.CALC + "\n첫 번째 숫자 : \n연산자 (+, -, *, /, %) : \n두 번째 숫자 : ");
                     calc.setNum1(scanner.nextInt());
                     calc.setOpcode(scanner.next());
                     calc.setNum2(scanner.nextInt());
-                    result = calcService.getCalc(calc);
+                    result = calcService.execute(calc);
                     break;
                 case "3":
                     System.out.println(GoogleDTO.GOOGLE_APP + "\nGoogle 검색 또는 URL 입력 : ");
                     google.setWord(scanner.next());
-                    result = googleService.search(google);
+                    result = googleService.execute(google);
                     break;
                 case "4":
                     System.out.println(GradeDTO.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : ");
@@ -75,14 +75,14 @@ public class DemoController {
                     grade.setKor(scanner.nextInt());
                     grade.setEng(scanner.nextInt());
                     grade.setMath(scanner.nextInt());
-                    result = gradeService.getGrade(grade);
+                    result = gradeService.execute(grade);
                     break;
                 case "5":
                     System.out.println(LoginDTO.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : ");
                     login.setId(scanner.next());
                     login.setPw(scanner.next());
                     login.setName(scanner.next());
-                    result = loginService.login(login);
+                    result = loginService.execute(login);
                     break;
                 default:
                     result = "선택된 메뉴가 없습니다. 1~5 사이의 숫자를 입력해주세요.";
