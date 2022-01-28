@@ -19,6 +19,7 @@ public class LoginDTO {
     private String id;
     private String pw;
     private String name;
+    public static String PASSWORD = "abc";
 
     public String getId() {
         return id;
