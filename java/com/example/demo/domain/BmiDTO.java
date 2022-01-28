@@ -1,4 +1,4 @@
-package com.example.demo.bmi;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.bmi
@@ -7,9 +7,9 @@ package com.example.demo.bmi;
  * date       : 2022-01-25
  * desc       : bmi 지수를 계산해주는 앱
  * variable   : [클래스 변수] BMI_APP
- *              [인스턴스 변수] name, height, weight
- *              [지역 변수] result
- *              [매개변수] name, height, weight
+ * [인스턴스 변수] name, height, weight
+ * [지역 변수] result
+ * [매개변수] name, height, weight
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
@@ -24,18 +24,23 @@ public class BmiDTO {
     public String getName() { // getter (read only)
         return name;
     }
+
     public void setName(String name) { // setter (write only)
         this.name = name;
     }
+
     public double getHeight() {
         return height;
     }
+
     public void setHeight(double height) {
         this.height = height;
     }
+
     public double getWeight() {
         return weight;
     }
+
     public void setWeight(double weight) {
         this.weight = weight;
     }

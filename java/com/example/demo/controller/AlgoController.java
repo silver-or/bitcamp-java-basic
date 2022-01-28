@@ -1,4 +1,7 @@
-package com.example.demo.algorithm;
+package com.example.demo.controller;
+
+import com.example.demo.algorithm.Queue;
+import com.example.demo.algorithm.Stack;
 
 import java.util.Scanner;
 
@@ -11,7 +14,7 @@ import java.util.Scanner;
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-01-27       최은아       최초 생성
+ * 2022-01-27    최은아       최초 생성
  */
 public class AlgoController {
     public static void main(String[] args) {

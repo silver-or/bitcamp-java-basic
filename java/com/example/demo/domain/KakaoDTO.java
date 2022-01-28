@@ -1,4 +1,4 @@
-package com.example.demo.kakao;
+package com.example.demo.domain;
 
 /**
  * packageName: com.example.demo.kakao
@@ -17,14 +17,24 @@ package com.example.demo.kakao;
 * String telno, String message
 * */
 
-public class KakaoApp {
+public class KakaoDTO {
     static String KAKAO_APP = "Kakao APP";
     private String telno;
     private String message;
 
-    public String kakao(String telno, String message) {
+    public String getTelno() {
+        return telno;
+    }
+
+    public void setTelno(String telno) {
         this.telno = telno;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
-        return String.format("telno %s, message %s", telno, message);
     }
 }
