@@ -25,13 +25,13 @@ public class AlgoController {
                     "[권솔이] 3.Heap \t" +
                     "4.Brute Force \n" +
                     "[김지혜] 5.Sort \t" +
-                    "6.Graph \n" +
-                    "[하진희] 7.Greedy \t" +
-                    "8.Bin Search \n" +
-                    "[최은아] 9.Stack \t" +
-                    "10.Queue \t" +
-                    "11. DFS \t" +
-                    "12. BFS \n");
+                    "6.DFS \t" +
+                    "7. BFS \n" +
+                    "[하진희] 8.Greedy \t" +
+                    "9.Bin Search \n" +
+                    "[최은아] 10.Stack \t" +
+                    "11.Queue \t" +
+                    "12. Graph \n");
             switch (scanner.next()) {
                 case "0" :
                     System.out.println("Exit"); return;

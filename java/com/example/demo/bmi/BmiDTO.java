@@ -15,17 +15,28 @@ package com.example.demo.bmi;
  * ================================
  * 2022-01-25    최은아       최초 생성
  */
-public class BmiApp {
+public class BmiDTO {
     public static String BMI_APP = "BMI";
     private String name;
     private double height;
     private double weight;
 
-    public String getBMI(String name, double height, double weight) {
+    public String getName() { // getter (read only)
+        return name;
+    }
+    public void setName(String name) { // setter (write only)
         this.name = name;
+    }
+    public double getHeight() {
+        return height;
+    }
+    public void setHeight(double height) {
         this.height = height;
+    }
+    public double getWeight() {
+        return weight;
+    }
+    public void setWeight(double weight) {
         this.weight = weight;
-        String result = String.format("%s님의 키 : %.2f 몸무게 : %.2f, bmi 지수는 정상입니다.", name, height, weight);
-        return result;
     }
 }

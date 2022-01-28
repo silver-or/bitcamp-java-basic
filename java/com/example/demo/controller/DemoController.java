@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.bmi.BmiApp;
-import com.example.demo.bmi.BmiDemo;
+import com.example.demo.bmi.BmiDTO;
+import com.example.demo.bmi.BmiService;
 import com.example.demo.calc.CalcApp;
 import com.example.demo.calc.CalcDemo;
 import com.example.demo.google.GoogleApp;
@@ -27,7 +27,8 @@ import java.util.Scanner;
 public class DemoController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        BmiDemo bmiDemo = new BmiDemo();
+        BmiDTO bmi = new BmiDTO();
+        BmiService bmiService = new BmiService();
         CalcDemo calcDemo = new CalcDemo();
         GoogleDemo googleDemo = new GoogleDemo();
         GradeDemo gradeDemo = new GradeDemo();
@@ -42,8 +43,11 @@ public class DemoController {
                 case "0" :
                     System.out.println("Exit"); return;
                 case "1" :
-                    System.out.println(BmiApp.BMI_APP + "\n이름 : \n키 : \n몸무게 : ");
-                    result = bmiDemo.execute(scanner.next(), scanner.nextDouble(), scanner.nextDouble());
+                    System.out.println(BmiDTO.BMI_APP + "\n이름 : \n키 : \n몸무게 : ");
+                    bmi.setName(scanner.next());
+                    bmi.setHeight(scanner.nextDouble());
+                    bmi.setWeight(scanner.nextDouble());
+                    result = bmiService.getBMI(bmi);
                     break;
                 case "2" :
                     System.out.println(CalcApp.CALC + "\n첫 번째 숫자 : \n연산자 : \n두 번째 숫자 : ");

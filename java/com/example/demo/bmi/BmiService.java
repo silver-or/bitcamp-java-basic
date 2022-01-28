@@ -1,7 +1,5 @@
 package com.example.demo.bmi;
 
-import java.util.Scanner;
-
 /**
  * packageName: com.example.demo.bmi
  * fileName   : BmiDemo
@@ -13,9 +11,9 @@ import java.util.Scanner;
  * ================================
  * 2022-01-25    최은아       최초 생성
  */
-public class BmiDemo {
-    public String execute(String name, double height, double weight) {
-        BmiApp bmiApp = new BmiApp();
-        return bmiApp.getBMI(name, height, weight);
+public class BmiService {
+    public String getBMI(BmiDTO bmi) {
+        // Algorithm
+        return String.format("%s님의 키 : %.2f 몸무게 : %.2f, bmi 지수는 정상입니다.", bmi.getName(), bmi.getHeight(), bmi.getWeight());
     }
 }
