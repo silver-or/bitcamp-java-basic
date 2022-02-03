@@ -70,13 +70,24 @@ public class DemoController {
                     result = googleService.execute(google);
                     break;
                 case "4":
-                    System.out.println(GradeDTO.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : ");
-                    grade.setName(scanner.next());
-                    grade.setKor(scanner.nextInt());
-                    grade.setEng(scanner.nextInt());
-                    grade.setMath(scanner.nextInt());
-                    result = gradeService.execute(grade);
-                    break;
+                    System.out.println("학생 수를 입력해주세요.");
+                    int count = scanner.nextInt();
+                    GradeDTO[] grades = new GradeDTO[count];
+                    String[] results = new String[count];
+
+                    for (int i = 0; i < grades.length; i++) {
+                        grades[i] = new GradeDTO();
+                        System.out.println(GradeDTO.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : ");
+                        grades[i].setName(scanner.next());
+                        grades[i].setKor(scanner.nextInt());
+                        grades[i].setEng(scanner.nextInt());
+                        grades[i].setMath(scanner.nextInt());
+                        results[i] = gradeService.execute(grades[i]);
+                    }
+                    for (int i = 0; i < results.length; i++) {
+                        System.out.println(results[i] + "\n");
+                    }
+                    return;
                 case "5":
                     System.out.println(LoginDTO.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : ");
                     login.setId(scanner.next());
