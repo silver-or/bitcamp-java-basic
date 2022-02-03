@@ -31,7 +31,7 @@ public class DemoController {
         BmiDTO bmi = new BmiDTO();
         CalcDTO calc = new CalcDTO();
         GoogleDTO google = new GoogleDTO();
-        GradeDTO grade = new GradeDTO();
+//        GradeDTO grade = new GradeDTO();
         LoginDTO login = new LoginDTO();
 
         BmiService bmiService = new BmiService();
