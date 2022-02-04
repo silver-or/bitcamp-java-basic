@@ -13,7 +13,7 @@ import java.util.Scanner;
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-02-03       최은아       최초 생성
+ * 2022-02-03    최은아       최초 생성
  */
 public class TeamController {
     public static void main(String[] args) {
