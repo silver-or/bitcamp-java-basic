@@ -9,11 +9,10 @@ package com.example.demo.controller;
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-02-04       최은아       최초 생성
+ * 2022-02-04    최은아       최초 생성
  */
 public class ArrayExam {
     public static void main(String[] args) {
-
         String[] arr = {"권혜민", "조현국", "김진영", "김한슬", "서성민",
                         "정렬", "해시", "힙", "완전탐색", "DP",
                         "스택", "깊이우선탐색 ", "그래프", "탐욕법", "이중탐색",
@@ -25,7 +24,7 @@ public class ArrayExam {
             if (i % 5 == 0) {
                 s += "\n";
             }
-            s += i + " : " + arr[i] + "\t ";
+            s += i + " : " + arr[i] + " \t ";
         }
         System.out.println(s);
 
@@ -37,7 +36,7 @@ public class ArrayExam {
         for (int i = 0; i < arr.length; i++) {
             if (arr[i].equals("김진영")) {
                 for (int j = 0; j < 3; j++) {
-                    s += arr[i+ j * 5];
+                    s += arr[i + j * 5];
                     if (j < 2) {
                         s += ", ";
                     }
@@ -46,7 +45,15 @@ public class ArrayExam {
         }
         System.out.println(s);
 
-        System.out.println("Q3. 큐를 담당한 사람을 출력하세요. 예) 큐를 담당한 사람: 권혜민 ");
+        System.out.println("-------------------------------------------------");
 
+        System.out.println("Q3. 큐를 담당한 사람을 출력하세요. 예) 큐를 담당한 사람: 권혜민 ");
+        s = "";
+        for (int i = 0 ; i < arr.length; i++) {
+            if (arr[i].equals("큐")) {
+                s += arr[i] + "를 담당한 사람: " + arr[i % 5];
+            }
+        }
+        System.out.println(s);
     }
 }

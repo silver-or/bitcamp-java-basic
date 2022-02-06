@@ -23,7 +23,7 @@ public class TeamController2 {
             if ((i % 5) == 0) {
                 s += "\n";
             }
-            s += i + " : " + arr[i] + "\t"; // 오버로딩
+            s += i + " : " + arr[i] + "\t "; // 오버로딩
         }
         System.out.println(s);
 
