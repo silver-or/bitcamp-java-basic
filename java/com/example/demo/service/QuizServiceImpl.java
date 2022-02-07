@@ -70,34 +70,12 @@ public class QuizServiceImpl implements QuizService {
     public void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요. 예) 김지혜(3개), 최은아(3개), 심민혜(2개), 권솔이(2개), 하진희(2개)");
         int[] count = new int[5];
-//      String[] countManager = new String[5];
         String s = "";
-        for (int i = 0; i < arr.length; i++) {
-/*
-            switch(arr[i]) {
-                case "김지혜" : countManager[0] = arr[i]; break;
-                case "최은아" : countManager[1] = arr[i]; break;
-                case "심민혜" : countManager[2] = arr[i]; break;
-                case "권솔이" : countManager[3] = arr[i]; break;
-                case "하진희" : countManager[4] = arr[i]; break;
-            }
-*/
-/*
-            if (i > 4) {
-                switch (i % 5) {
-                    case 0 : count[0]++; break;
-                    case 1 : count[1]++; break;
-                    case 2 : count[2]++; break;
-                    case 3 : count[3]++; break;
-                    case 4 : count[4]++; break;
-                }
-            }
-*/
-            if (i > 4) {
-                for (int j = 0; j < 5; j++) {
-                    if (i % 5 == j) {
-                        count[j]++;
-                    }
+        for (int i = 5; i < arr.length; i++) {
+            int a = i % 5;
+            for (int j = 0; j < 5; j++) {
+                if (a == j) {
+                    count[j]++;
                 }
             }
         }
@@ -108,5 +86,27 @@ public class QuizServiceImpl implements QuizService {
             }
         }
         System.out.println(s);
+/*
+        // 500 * 5 의 열 count 세기
+        s = "";
+        String[] array = new String[2500];
+        int[] countArray = new int[5];
+
+        for (int i = 0; i < 5; i++) {
+            array[i] = i +"열";
+        }
+
+        for (int i = 5; i < array.length; i++) {
+            for (int j = 0; j < 5; j++) {
+                if (i % 5 == j) {
+                    countArray[j]++;
+                }
+            }
+        }
+        for (int i = 0; i < countArray.length; i++) {
+            s += array[i] + "의 count : " + countArray[i] + "\n";
+        }
+        System.out.println(s);
+*/
     }
 }

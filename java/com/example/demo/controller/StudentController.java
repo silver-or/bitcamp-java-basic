@@ -41,7 +41,7 @@ public class StudentController {
                 case "1":
                     System.out.println(BmiDTO.BMI_APP + "\n이름 : \n키 : \n몸무게 : ");
                     bmi.setName(scanner.next());
-                    bmi.setHeight(scanner.nextDouble());
+                    bmi.setTall(scanner.nextDouble());
                     bmi.setWeight(scanner.nextDouble());
                     result = service.getBmi(bmi);
                     break;

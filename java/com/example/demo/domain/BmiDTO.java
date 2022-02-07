@@ -18,7 +18,7 @@ package com.example.demo.domain;
 public class BmiDTO {
     public static String BMI_APP = "BMI";
     private String name;
-    private double height;
+    private double tall;
     private double weight;
 
     public String getName() { // getter (read only)
@@ -29,12 +29,12 @@ public class BmiDTO {
         this.name = name;
     }
 
-    public double getHeight() {
-        return height;
+    public double getTall() {
+        return tall;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setTall(double tall) {
+        this.tall = tall;
     }
 
     public double getWeight() {
