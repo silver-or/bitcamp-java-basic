@@ -59,6 +59,10 @@ public class Feb07ServiceImpl implements Feb07Service {
         String s = "";
         for (int i = num1; i <= num2; i++) {
             boolean flag = true;
+            if (i == 1) {
+                flag = false;
+                continue;
+            }
             for (int j = 2; j < i; j++) {
                 if (i % j == 0) {
                     flag = false;

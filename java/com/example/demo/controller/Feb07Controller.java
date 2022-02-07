@@ -40,7 +40,7 @@ public class Feb07Controller {
                     service.rps(scanner.nextInt());
                     break;
                 case "3":
-                    System.out.println("두 수를 입력해주세요.");
+                    System.out.println("1 이상의 두 수를 입력해주세요.");
                     service.getPrime(scanner.nextInt(), scanner.nextInt());
                     break;
                 case "4" :
