@@ -12,9 +12,9 @@ package com.example.demo.service;
  * 2022-02-07    최은아       최초 생성
  */
 public interface Feb07Service {
-    void dice(int num);
+    void dice(int num1, int num2, int num3);
     void rps(int num);
     void getPrime(int num1, int num2);
     void leapYear(int year);
-    void numberGolf(int num);
+    void numberGolf();
 }
