@@ -17,12 +17,11 @@ public class TeamController2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String[] arr = {"김지혜", "최은아", "심민혜", "권솔이", "하진희",
-                        "Sort", "Stack", "Hash", "Heap", "Greedy",
-                        "DFS", "Queue", "DP", "Brute Force", "Bin Search",
-                        "BFS", "Graph"};
-//        String result = ""; // Assignment (할당), 오버라이딩
+                "Sort", "Stack", "Hash", "Heap", "Greedy",
+                "DFS", "Queue", "DP", "Brute Force", "Bin Search",
+                "BFS", "Graph"};
         while (true) {
-            System.out.println(" \n 0.EXIT 1.QUIZ1 2.QUIZ2 3.QUIZ3 4.QUIZ4");
+            System.out.println("\n0.EXIT 1.QUIZ1 2.QUIZ2 3.QUIZ3 4.QUIZ4");
             switch (scanner.next()) {
                 case "0" :
                     System.out.println("Exit");
@@ -39,7 +38,7 @@ public class TeamController2 {
                 case "4" :
                     quiz4(arr);
                     break;
-                default :
+                default:
                     System.out.println("0~4 사이의 숫자를 입력해주세요.");
                     break;
             }
@@ -48,15 +47,14 @@ public class TeamController2 {
 
     private static void quiz1(String[] arr) {
         System.out.println("Q1. 팀별 과제를 출력하세요.");
-        String s = "";
+        String s = ""; // Assignment (할당), 오버라이딩
         for (int i = 0; i < arr.length; i++) {
-            if (i % 5 == 0) {
+            if ((i % 5) == 0) {
                 s += "\n";
             }
             s += i + " : " + arr[i] + "\t "; // 오버로딩
         }
         System.out.println(s);
-        return;
     }
 
     private static void quiz2(String[] arr) {
@@ -74,7 +72,6 @@ public class TeamController2 {
             }
         }
         System.out.println(s);
-        return;
     }
 
     private static void quiz3(String[] arr) {
@@ -97,14 +94,13 @@ public class TeamController2 {
             }
         }
         System.out.println(s);
-        return;
     }
 
     private static void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요. 예) 김지혜(3개), 최은아(3개), 심민혜(2개), 권솔이(2개), 하진희(2개)");
-        String s = "";
         int[] count = new int[5];
 //      String[] countManager = new String[5];
+        String s = "";
         for (int i = 0; i < arr.length; i++) {
 /*
             switch(arr[i]) {
@@ -141,6 +137,5 @@ public class TeamController2 {
             }
         }
         System.out.println(s);
-        return;
     }
 }
