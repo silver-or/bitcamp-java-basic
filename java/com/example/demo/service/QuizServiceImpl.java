@@ -1,51 +1,19 @@
-package com.example.demo.controller;
-
-import java.util.Scanner;
+package com.example.demo.service;
 
 /**
- * packageName: com.example.demo.controller
- * fileName   : TeamController2
+ * packageName: com.example.demo.service
+ * fileName   : QuizService
  * author     : 최은아
- * date       : 2022-02-04
+ * date       : 2022-02-07
  * desc       :
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-02-04    최은아       최초 생성
+ * 2022-02-07    최은아       최초 생성
  */
-public class TeamController2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String[] arr = {"김지혜", "최은아", "심민혜", "권솔이", "하진희",
-                "Sort", "Stack", "Hash", "Heap", "Greedy",
-                "DFS", "Queue", "DP", "Brute Force", "Bin Search",
-                "BFS", "Graph"};
-        while (true) {
-            System.out.println("\n0.EXIT 1.QUIZ1 2.QUIZ2 3.QUIZ3 4.QUIZ4");
-            switch (scanner.next()) {
-                case "0" :
-                    System.out.println("Exit");
-                    return;
-                case "1" :
-                    quiz1(arr);
-                    break;
-                case "2" :
-                    quiz2(arr);
-                    break;
-                case "3" :
-                    quiz3(arr);
-                    break;
-                case "4" :
-                    quiz4(arr);
-                    break;
-                default:
-                    System.out.println("0~4 사이의 숫자를 입력해주세요.");
-                    break;
-            }
-        }
-    }
-
-    private static void quiz1(String[] arr) {
+public class QuizServiceImpl implements QuizService {
+    @Override
+    public void quiz1(String[] arr) {
         System.out.println("Q1. 팀별 과제를 출력하세요.");
         String s = ""; // Assignment (할당), 오버라이딩
         for (int i = 0; i < arr.length; i++) {
@@ -57,7 +25,8 @@ public class TeamController2 {
         System.out.println(s);
     }
 
-    private static void quiz2(String[] arr) {
+    @Override
+    public void quiz2(String[] arr) {
         System.out.println("Q2. 팀장이 맡은 과제만 출력하세요. 예) 김지혜, Sort, DFS, BFS");
         String s = "";
         String name = "김지혜";
@@ -74,7 +43,8 @@ public class TeamController2 {
         System.out.println(s);
     }
 
-    private static void quiz3(String[] arr) {
+    @Override
+    public void quiz3(String[] arr) {
         System.out.println("Q3. 큐를 담당한 사람을 출력하세요. 예) 큐를 담당한 사람: 최은아");
         String s = "";
         for (int i = 0; i < arr.length; i++) {
@@ -96,7 +66,8 @@ public class TeamController2 {
         System.out.println(s);
     }
 
-    private static void quiz4(String[] arr) {
+    @Override
+    public void quiz4(String[] arr) {
         System.out.println("Q4. 팀원별 과제 수를 출력하세요. 예) 김지혜(3개), 최은아(3개), 심민혜(2개), 권솔이(2개), 하진희(2개)");
         int[] count = new int[5];
 //      String[] countManager = new String[5];
