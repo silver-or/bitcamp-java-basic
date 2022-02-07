@@ -96,7 +96,7 @@ public class DemoController {
                     result = loginService.execute(login);
                     break;
                 default:
-                    result = "선택된 메뉴가 없습니다. 1~5 사이의 숫자를 입력해주세요.";
+                    result = "선택된 메뉴가 없습니다. 0~5 사이의 숫자를 입력해주세요.";
             }
             System.out.println(result);
         }
