@@ -1,9 +1,6 @@
 package com.example.demo.quiz.controller;
 
-import com.example.demo.quiz.service.Feb06Service;
-import com.example.demo.quiz.service.Feb06ServiceImpl;
-import com.example.demo.quiz.service.Feb07Service;
-import com.example.demo.quiz.service.Feb07ServiceImpl;
+import com.example.demo.quiz.service.*;
 
 import java.util.Scanner;
 
@@ -22,6 +19,7 @@ public class QuizController {
     public void execute(Scanner scanner) {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
+        Feb08Service feb08Service = new Feb08ServiceImpl();
         while (true) {
             System.out.println("\n[서브 메뉴]\n" +
                                 "0. EXIT\n" +
@@ -106,7 +104,43 @@ public class QuizController {
                             break;
                     }
                     break;
-                case "3" : break;
+                case "3" :
+                    System.out.println("\n[소메뉴] \n" +
+                            "0. EXIT \n" +
+                            "1. 로또 \n" +
+                            "2. 야구 \n" +
+                            "3. 좌석 예약 \n" +
+                            "4. 은행 입출금 \n" +
+                            "5. 구구단 \n");
+                    switch (scanner.next()) {
+                        case "0" :
+                            System.out.println("### 종료 ###");
+                            return;
+                        case "1" :
+                            System.out.println("### 1. 로또 ###");
+                            feb08Service.lotto(scanner);
+                            break;
+                        case "2" :
+                            System.out.println("### 2. 야구 ###");
+                            feb08Service.baseball(scanner);
+                            break;
+                        case "3":
+                            System.out.println("### 3. 좌석 예약 ###");
+                            feb08Service.booking(scanner);
+                            break;
+                        case "4" :
+                            System.out.println("### 4. 은행 입출금 ###");
+                            feb08Service.bank(scanner); ;
+                            break;
+                        case "5" :
+                            System.out.println("### 5. 구구단 ###");
+                            feb08Service.gugudan(scanner);
+                            break;
+                        default :
+                            System.out.println("0~5 사이의 숫자를 입력해주세요.");
+                            break;
+                    }
+                    break;
                 case "4" : break;
                 default : System.out.println("올바른 범위 내의 숫자를 입력해주세요."); break;
             }
