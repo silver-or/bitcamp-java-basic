@@ -1,6 +1,6 @@
 package com.example.demo.oop.service;
 
-import com.example.demo.oop.domain.CelPhone;
+import com.example.demo.oop.domain.CellPhone;
 import com.example.demo.oop.domain.GalPhone;
 import com.example.demo.oop.domain.IPhone;
 import com.example.demo.oop.domain.Phone;
@@ -23,7 +23,7 @@ public class PhoneServiceImpl implements PhoneService{
     }
 
     @Override
-    public void useCelPhone(CelPhone phone) {
+    public void useCelPhone(CellPhone phone) {
         System.out.println(phone.toString());
     }
 

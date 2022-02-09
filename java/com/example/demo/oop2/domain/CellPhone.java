@@ -1,8 +1,8 @@
-package com.example.demo.oop.domain;
+package com.example.demo.oop2.domain;
 
 /**
- * packageName: com.example.demo.oop.domain
- * fileName   : CelPhone
+ * packageName: com.example.demo.oop2.domain
+ * fileName   : CellPhone
  * author     : 최은아
  * date       : 2022-02-09
  * desc       :
@@ -11,11 +11,11 @@ package com.example.demo.oop.domain;
  * ================================
  * 2022-02-09    최은아       최초 생성
  */
-public class CelPhone extends Phone {
-    private boolean portable;
+public class CellPhone extends Phone{
+    protected boolean portable;
     protected String move;
 
-    public CelPhone(String kind, String company, String move) {
+    public CellPhone(String kind, String company, String move) {
         super(kind, company);
         this.move = move;
     }

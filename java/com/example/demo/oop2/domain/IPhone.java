@@ -1,7 +1,7 @@
-package com.example.demo.oop.domain;
+package com.example.demo.oop2.domain;
 
 /**
- * packageName: com.example.demo.oop.domain
+ * packageName: com.example.demo.oop2.domain
  * fileName   : IPhone
  * author     : 최은아
  * date       : 2022-02-09
@@ -10,10 +10,8 @@ package com.example.demo.oop.domain;
  * DATE          AUTHOR        NOTE
  * ================================
  * 2022-02-09    최은아       최초 생성
- * 아이폰은 검색 (search) 속성이 추가된다.
- * KIND는 아이폰이다.
  */
-public class IPhone extends CellPhone {
+public class IPhone extends CellPhone{
     public final static String KIND = "아이폰";
     protected String search;
 

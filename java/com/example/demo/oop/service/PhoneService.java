@@ -1,6 +1,6 @@
 package com.example.demo.oop.service;
 
-import com.example.demo.oop.domain.CelPhone;
+import com.example.demo.oop.domain.CellPhone;
 import com.example.demo.oop.domain.GalPhone;
 import com.example.demo.oop.domain.IPhone;
 import com.example.demo.oop.domain.Phone;
@@ -18,7 +18,7 @@ import com.example.demo.oop.domain.Phone;
  */
 public interface PhoneService {
     void usePhone(Phone phone);
-    void useCelPhone(CelPhone phone);
+    void useCelPhone(CellPhone phone);
     void useIPhone(IPhone phone);
     void useGalPhone(GalPhone phone);
 }
