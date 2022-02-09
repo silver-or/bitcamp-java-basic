@@ -16,19 +16,27 @@ import java.util.Scanner;
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
     public void lotto(Scanner scanner) {
-
+        
     }
 
     @Override
     public void baseball(Scanner scanner) {
+        /**
+         * 사용되는 숫자는 1에서 9까지 서로 다른 숫자이다.
+         * 숫자는 맞지만 위치가 틀렸을 때는 볼.
+         * 숫자와 위치가 전부 맞으면 스트라이크.
+         * 숫자와 위치가 전부 틀리면 아웃.
+         * 무엇이 볼이고 스트라이크인지는 알려주지 않는다.
+         * 두 숫자가 중복되면 경우의 수가 많아지므로 중복 숫자는 사용하지 않는다.
+         * */
         int[] com = new int[3];
         int[] user = new int[3];
         int strike = 0;
         int ball = 0;
         int num = 0;
-        String game = "Y";
-        boolean duplicate;
+        boolean duplicate; // 컴퓨터 난수의 중복 여부 확인
         String s = "";
+        // 컴퓨터 난수 생성
         for (int i = 0; i < 3; i++) {
             duplicate = true;
             while (duplicate) {
@@ -44,13 +52,19 @@ public class Feb08ServiceImpl implements Feb08Service{
             com[i] = num;
         }
 
-        while (game.equals("Y")) {
+        for (int chance = 1; chance <= 5; chance++) {
             strike = 0;
             ball = 0;
             s = "";
 
+            if (chance == 5) {
+                System.out.println("마지막 도전입니다.");
+            } else {
+                System.out.println(chance + "번째 도전입니다.");
+            }
+
             for (int i = 0; i < 3; i++) {
-                System.out.println((i + 1) + "번째 수를 입력하세요 : (1 ~ 9 사이의 수)");
+                System.out.println((i + 1) + "번째 수를 입력하세요 : (1 ~ 9 사이의 수) *단, 중복은 허용하지 않습니다.*");
                 user[i] = scanner.nextInt();
             }
 
@@ -58,6 +72,7 @@ public class Feb08ServiceImpl implements Feb08Service{
                 System.out.println("중복된 숫자는 입력할 수 없습니다.");
                 continue;
             }
+
 
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
@@ -71,22 +86,24 @@ public class Feb08ServiceImpl implements Feb08Service{
                 }
             }
 
-            for (int i = 0; i < 3; i++) {
-                s += (i+1) + "번째 난수 : " + com[i] + "\t 사용자가 입력한 수 : " + user[i] + "\n";
-            }
-
             if (strike == 3) {
-                s += "홈런입니다.";
+                System.out.println("정답입니다! 게임을 종료합니다.");
                 break;
             } else if (strike == 0 && ball == 0) {
                 s += "아웃입니다.";
             } else {
-                s += "Strike : " + strike + ", Ball : " + ball + " 입니다.";
+                s += strike + "S " + ball + "B 입니다.";
             }
             System.out.println(s);
 
-            System.out.println("게임을 계속하시려면 'Y', 그만하시려면 'Y' 이외의 키를 입력해주세요.");
-            game = scanner.next();
+            if (chance == 5) {
+                String answer = "아쉬워요. 정답은 ";
+                for (int i = 0; i < com.length; i++) {
+                    answer += com[i] + " ";
+                }
+                answer += "입니다.";
+                System.out.println(answer);
+            }
         }
     }
 
@@ -102,6 +119,10 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void gugudan(Scanner scanner) {
-
+        System.out.println("단을 입력해주세요 : ");
+        int dan = scanner.nextInt();
+        for (int i = 1; i < 10; i++) {
+            System.out.println(dan + "*" + i + "=" + dan*i);
+        }
     }
 }
