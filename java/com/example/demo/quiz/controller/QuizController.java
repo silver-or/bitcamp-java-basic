@@ -74,7 +74,7 @@ public class QuizController {
                             "2. 가위바위보 (rps) \n" +
                             "3. 입력받은 두 수 사이의 소수 구하기 (getPrime) \n" +
                             "4. 자바로 입력받은 연도가 윤년인지 평년인지 판단하기 (leapYear) \n" +
-                            "5. 임의로 입력받은 숫자 맞추기(numberGolf) \n");
+                            "5. 임의로 입력받은 숫자 맞추기(numberGolf)");
                     switch (scanner.next()) {
                         case "0" :
                             System.out.println("### 종료 ###");
@@ -111,7 +111,7 @@ public class QuizController {
                             "2. 야구 \n" +
                             "3. 좌석 예약 \n" +
                             "4. 은행 입출금 \n" +
-                            "5. 구구단 \n");
+                            "5. 구구단");
                     switch (scanner.next()) {
                         case "0" :
                             System.out.println("### 종료 ###");

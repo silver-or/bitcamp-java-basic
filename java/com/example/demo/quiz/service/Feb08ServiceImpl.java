@@ -16,7 +16,43 @@ import java.util.Scanner;
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
     public void lotto(Scanner scanner) {
-        
+        int[] com = new int[6];
+        int[] user = new int[6];
+        int count = 0;
+
+        System.out.println("1~45까지의 숫자 6개를 입력하세요.");
+        for (int i = 0; i < user.length; i++) {
+            user[i] = scanner.nextInt();
+        }
+
+        System.out.println("추첨번호");
+        for (int i = 0; i<com.length; i++) {
+            com[i] = (int)(Math.random() * 45) +1;
+            System.out.print("[" +com[i]+ "] ");
+        }
+
+        for (int i = 0; i < 6; i++) {
+            for (int j = 0; j < 6; j++) {
+                if (com[i] == user[j]) {
+                    count++;
+                }
+            }
+        }
+
+        switch (count) {
+            case 6:
+                System.out.print("\n1등에 당첨되었습니다.");
+                break;
+            case 5:
+                System.out.print("\n2등에 당첨되었습니다.");
+                break;
+            case 4:
+                System.out.print("\n3등에 당첨되었습니다.");
+                break;
+            default:
+                System.out.print("\n당첨되지 않았습니다.");
+                break;
+        }
     }
 
     @Override
@@ -73,7 +109,6 @@ public class Feb08ServiceImpl implements Feb08Service{
                 continue;
             }
 
-
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     if (com[i] == user[j]) {
@@ -109,20 +144,88 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void booking(Scanner scanner) {
+        final int size = 10;//좌석 10자리
+        int[] seats = new int[size];
+
+        while (true) {
+            System.out.println("-----------------");
+            for (int i = 0; i < size; i++) {
+                System.out.print((i+1)+" ");//극장좌석번호 출력
+            }
+            System.out.println("\n-----------------");
+            for (int i =0; i < size; i++) {
+                System.out.print(seats[i]+" ");
+            }
+            System.out.println("\n-----------------");
+            System.out.println("원하시는 좌석번호 입력(종료 -1): ");
+            int s = scanner.nextInt();
+
+            if (s == -1) {
+                break;
+            } else if (seats[s-1]==0){  //예약이 안된 경우 0으로 표기
+                seats[s-1] = 1;         //예약된 좌석은 1로 바뀜
+                System.out.println("예약되었습니다.");
+            } else { //예약이 된 경우
+                System.out.println("이미 예약 된 자리입니다.");
+            }
+        }
 
     }
 
     @Override
     public void bank(Scanner scanner) {
+        int money;
+        int totalmoney = 0;
 
+        while (true) {
+            System.out.println("0) Exit 1) 입금 2) 출금 3) 잔고");
+            System.out.println("메뉴 선택 : ");
+            switch (scanner.nextInt()) {
+                case 0 :
+                    System.out.println("프로그램 종료");
+                    return;
+                case 1 :
+                    System.out.print("예금액 : ");
+                    money = scanner.nextInt();
+                    totalmoney = totalmoney + money;
+                    break;
+                case 2 :
+                    System.out.print("출금액 : ");
+                    money = scanner.nextInt();
+                    if (money > totalmoney) {
+                        System.out.println("출금액이 잔고보다 많습니다.");
+                    } else {
+                        totalmoney = totalmoney - money;
+                    }
+                    break;
+                case 3 :
+                    System.out.print("잔고액 : ");
+                    System.out.println(totalmoney);
+                    break;
+                default :
+                    System.out.println("0~3 사이의 숫자를 입력해주세요.");
+                    break;
+            }
+        }
     }
 
     @Override
     public void gugudan(Scanner scanner) {
-        System.out.println("단을 입력해주세요 : ");
-        int dan = scanner.nextInt();
-        for (int i = 1; i < 10; i++) {
-            System.out.println(dan + "*" + i + "=" + dan*i);
+        while (true) {
+            String s = "";
+            System.out.println("단을 입력해주세요 : (종료 : 0)");
+            int dan = scanner.nextInt();
+            if (dan == 0) {
+                break;
+            } else if (dan > 1 && dan < 10) {
+                System.out.println("### " + dan + "단 ###");
+                for (int i = 1; i < 10; i++) {
+                    s += dan + " * " + i + " = " + dan*i + "\n";
+                }
+            } else {
+                s = "2~9 사이의 숫자를 입력해주세요.";
+            }
+            System.out.println(s);
         }
     }
 }
