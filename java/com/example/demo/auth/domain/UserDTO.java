@@ -12,10 +12,15 @@ package com.example.demo.auth.domain;
  * 2022-01-24       최은아       최초 생성
  */
 
-public class LoginDTO {
+public class UserDTO {
     // 객체 : state(상태)와 behavior(기능)의 집합
     // 실행당하는 대상
     public static String LOGIN_APP = "Login APP";
+
+    private final static UserDTO userDTO = new UserDTO();
+    private UserDTO(){}
+    public static UserDTO getInstance(){ return userDTO; }
+
     private String id;
     private String pw;
     private String name;

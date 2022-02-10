@@ -20,13 +20,14 @@ public class QuizController {
         Feb06Service feb06Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
         while (true) {
             System.out.println("\n[서브 메뉴]\n" +
                                 "0. EXIT\n" +
                                 "1. 2월 6일\n" +
                                 "2. 2월 7일\n" +
                                 "3. 2월 8일\n" +
-                                "4. 2월 9일");
+                                "4. 2월 10일");
             switch (scanner.next()) {
                 case "0" :
                     System.out.println("Exit");
@@ -141,7 +142,62 @@ public class QuizController {
                             break;
                     }
                     break;
-                case "4" : break;
+                case "4" :
+                    System.out.println("\n[소메뉴] \n" +
+                            "0. EXIT \n" +
+                            "1. bubbleSort \n" +
+                            "2. insertionSort \n" +
+                            "3. selectionSort \n" +
+                            "4. quickSort \n" +
+                            "5. mergeSort \n" +
+                            "6. magicSquare \n" +
+                            "7. zigzag \n" +
+                            "8. rectangleStarPrint \n" +
+                            "9. triangleStarPrint");
+                    switch (scanner.next()) {
+                        case "0" :
+                            System.out.println("### 종료 ###");
+                            return;
+                        case "1" :
+                            System.out.println("### 1. bubbleSort ###");
+                            feb10Service.bubbleSort();
+                            break;
+                        case "2" :
+                            System.out.println("### 2. insertionSort ###");
+                            feb10Service.insertionSort();
+                            break;
+                        case "3":
+                            System.out.println("### 3. selectionSort ###");
+                            feb10Service.selectionSort();
+                            break;
+                        case "4" :
+                            System.out.println("### 4. quickSort ###");
+                            feb10Service.quickSort();
+                            break;
+                        case "5" :
+                            System.out.println("### 5. mergeSort ###");
+                            feb10Service.mergeSort();
+                            break;
+                        case "6" :
+                            System.out.println("### 6. magicSquare ###");
+                            feb10Service.magicSquare();
+                            break;
+                        case "7" :
+                            System.out.println("### 7. zigzag ###");
+                            feb10Service.zigzag();
+                        case "8" :
+                            System.out.println("### 8. rectangleStarPrint ###");
+                            feb10Service.rectangleStarPrint();
+                            break;
+                        case "9" :
+                            System.out.println("### 9. triangleStarPrint ###");
+                            feb10Service.triangleStarPrint();
+                            break;
+                        default :
+                            System.out.println("0~5 사이의 숫자를 입력해주세요.");
+                            break;
+                    }
+                    break;
                 default : System.out.println("올바른 범위 내의 숫자를 입력해주세요."); break;
             }
         }

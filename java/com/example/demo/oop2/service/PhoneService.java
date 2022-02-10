@@ -14,7 +14,7 @@ import com.example.demo.oop2.domain.Phone;
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-02-09       최은아       최초 생성
+ * 2022-02-09    최은아       최초 생성
  */
 public interface PhoneService {
     void usePhone(Phone phone);

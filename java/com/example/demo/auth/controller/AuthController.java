@@ -19,11 +19,9 @@ import java.util.Scanner;
  */
 public class AuthController {
     public void execute(Scanner scanner) {
-        BmiDTO bmi = new BmiDTO();
         CalcDTO calc = new CalcDTO();
         GoogleDTO google = new GoogleDTO();
 //        GradeDTO grade = new GradeDTO();
-        LoginDTO login = new LoginDTO();
 
         MemberService service = new MemberServiceImpl();
 
@@ -39,10 +37,11 @@ public class AuthController {
                     return;
                 case "1":
                     System.out.println(BmiDTO.BMI_APP + "\n이름 : \n키 : \n몸무게 : ");
-                    bmi.setName(scanner.next());
-                    bmi.setTall(scanner.nextDouble());
-                    bmi.setWeight(scanner.nextDouble());
-                    result = service.getBmi(bmi);
+                    BmiDTO b = BmiDTO.getInstance();
+                    b.setName(scanner.next());
+                    b.setTall(scanner.nextDouble());
+                    b.setWeight(scanner.nextDouble());
+                    result = service.getBmi(b);
                     break;
                 case "2":
                     System.out.println(CalcDTO.CALC + "\n첫 번째 숫자 : \n연산자 (+, -, *, /, %) : \n두 번째 숫자 : ");
@@ -63,7 +62,7 @@ public class AuthController {
                     String[] results = new String[count];
 
                     for (int i = 0; i < grades.length; i++) {
-                        grades[i] = new GradeDTO();
+                        grades[i] = GradeDTO.getInstance();
                         System.out.println(GradeDTO.GRADE_TITLE + "\n이름 : \n국어 : \n영어 : \n수학 : ");
                         grades[i].setName(scanner.next());
                         grades[i].setKor(scanner.nextInt());
@@ -76,11 +75,12 @@ public class AuthController {
                     }
                     break;
                 case "5":
-                    System.out.println(LoginDTO.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : ");
-                    login.setId(scanner.next());
-                    login.setPw(scanner.next());
-                    login.setName(scanner.next());
-                    result = service.login(login);
+                    System.out.println(UserDTO.LOGIN_APP + "\n아이디 : \n비밀번호 : \n이름 : ");
+                    UserDTO u = UserDTO.getInstance();
+                    u.setId(scanner.next());
+                    u.setPw(scanner.next());
+                    u.setName(scanner.next());
+                    result = service.login(u);
                     break;
                 default:
                     result = "선택된 메뉴가 없습니다. 0~5 사이의 숫자를 입력해주세요.";

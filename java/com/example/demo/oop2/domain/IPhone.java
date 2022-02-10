@@ -1,5 +1,7 @@
 package com.example.demo.oop2.domain;
 
+
+
 /**
  * packageName: com.example.demo.oop2.domain
  * fileName   : IPhone
@@ -11,7 +13,7 @@ package com.example.demo.oop2.domain;
  * ================================
  * 2022-02-09    최은아       최초 생성
  */
-public class IPhone extends CellPhone{
+public class IPhone extends CalcDTO {
     public final static String KIND = "아이폰";
     protected String search;
 

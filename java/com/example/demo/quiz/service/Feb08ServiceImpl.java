@@ -12,6 +12,7 @@ import java.util.Scanner;
  * DATE          AUTHOR        NOTE
  * ================================
  * 2022-02-08    최은아       최초 생성
+ * 2022-02-10    최은아       구구단 수정
  */
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
@@ -211,21 +212,20 @@ public class Feb08ServiceImpl implements Feb08Service{
 
     @Override
     public void gugudan(Scanner scanner) {
-        while (true) {
-            String s = "";
-            System.out.println("단을 입력해주세요 : (종료 : 0)");
-            int dan = scanner.nextInt();
-            if (dan == 0) {
-                break;
-            } else if (dan > 1 && dan < 10) {
-                System.out.println("### " + dan + "단 ###");
-                for (int i = 1; i < 10; i++) {
-                    s += dan + " * " + i + " = " + dan*i + "\n";
+        for (int i = 2; i < 10; i+=4) {
+            for (int j = 1; j < 10; j++) {
+                if (j == 1) {
+                    for (int a = 0; a < 4; a++) {
+                        System.out.print((i + a) + "단 \t");
+                    }
+                    System.out.println();
                 }
-            } else {
-                s = "2~9 사이의 숫자를 입력해주세요.";
+                for(int k = 0; k<4; k++){
+                    System.out.print((i+k)+"X"+j+"="+((i+k)*j)+"\t");
+                }
+                System.out.println();
             }
-            System.out.println(s);
+            System.out.println();
         }
     }
 }

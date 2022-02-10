@@ -9,7 +9,7 @@ package com.example.demo.oop2.domain;
  * ================================
  * DATE          AUTHOR        NOTE
  * ================================
- * 2022-02-09       최은아       최초 생성
+ * 2022-02-09    최은아       최초 생성
  */
 public class GalPhone extends IPhone{
     public final static String KIND = "갤럭시";

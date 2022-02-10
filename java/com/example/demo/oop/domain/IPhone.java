@@ -11,7 +11,7 @@ package com.example.demo.oop.domain;
  * ================================
  * 2022-02-09    최은아       최초 생성
  * 아이폰은 검색 (search) 속성이 추가된다.
- * KIND는 아이폰이다.
+ * 잡스는 아이폰을 휴대폰으로 불리는 것을 거부했다. 그래서 KIND는 아이폰이다.
  */
 public class IPhone extends CellPhone {
     public final static String KIND = "아이폰";
