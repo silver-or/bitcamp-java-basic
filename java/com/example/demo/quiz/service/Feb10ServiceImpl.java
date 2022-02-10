@@ -14,7 +14,36 @@ package com.example.demo.quiz.service;
 public class Feb10ServiceImpl implements Feb10Service{
     @Override
     public void bubbleSort() {
-
+        boolean duplicate;
+        int num = 0;
+        int temp;
+        int[] array = new int[10];
+        for (int i = 0 ; i < array.length; i++) {
+            duplicate = true;
+            while (duplicate) {
+                num = (int)(Math.random() * 100) + 1;
+                duplicate = false;
+                for (int j = 0; j < i; j++) {
+                    if (array[j] == num) {
+                        duplicate = true;
+                        break;
+                    }
+                }
+            }
+            array[i] = num;
+        }
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
     }
 
     @Override
