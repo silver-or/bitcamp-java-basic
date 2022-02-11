@@ -58,7 +58,47 @@ public class Feb10ServiceImpl implements Feb10Service{
 
     @Override
     public void quickSort() {
+        boolean duplicate;
+        int temp;
+        int num = 0;
+        int[] array = new int[10];
+        for (int i = 0 ; i < array.length; i++) {
+            duplicate = true;
+            while (duplicate) {
+                num = (int)(Math.random() * 100) + 1;
+                duplicate = false;
+                for (int j = 0; j < i; j++) {
+                    if (array[j] == num) {
+                        duplicate = true;
+                        break;
+                    }
+                }
+            }
+            array[i] = num;
+        }
+        /*
+        int left = 0;
+        int right = array.length - 1;
 
+        int lo = left;
+        int hi = right;
+        int pivot = array[0];
+
+        while (lo < hi) {
+            while (array[hi] > pivot && lo < hi) {
+                hi--;
+            }
+            while (array[lo] <= pivot && lo < hi) {
+                lo++;
+            }
+            temp = array[lo];
+            array[lo] = array[hi];
+            array[hi] = temp;
+        }
+        temp = array[left];
+        array[left] = array[lo];
+        array[lo] = temp;
+        */
     }
 
     @Override
