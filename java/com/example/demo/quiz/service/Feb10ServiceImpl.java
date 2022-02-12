@@ -12,6 +12,9 @@ package com.example.demo.quiz.service;
  * 2022-02-10    최은아       최초 생성
  */
 public class Feb10ServiceImpl implements Feb10Service{
+    /*
+    * author : 하진희
+    * */
     @Override
     public void bubbleSort() {
         boolean duplicate;
@@ -55,57 +58,48 @@ public class Feb10ServiceImpl implements Feb10Service{
     public void selectionSort() {
 
     }
-
+    /*
+     * author : 김지혜
+     * */
     @Override
-    public void quickSort() {
-        boolean duplicate;
-        int temp;
-        int num = 0;
-        int[] array = new int[10];
-        for (int i = 0 ; i < array.length; i++) {
-            duplicate = true;
-            while (duplicate) {
-                num = (int)(Math.random() * 100) + 1;
-                duplicate = false;
-                for (int j = 0; j < i; j++) {
-                    if (array[j] == num) {
-                        duplicate = true;
-                        break;
-                    }
+    public int[] quickSort(int[] array, int m, int n) {
+        // ArrayIndexOutOfBoundsException 에러 발생하는 경우 존재, 해결방법 못 찾음
+        // pivot은 m, 배열의 마지막 인덱스는 n
+        int i, j, temp;
+        if (m < n) {
+            i = m;
+            j = n + 1;
+            do {
+                do {
+                    i++;
+                } while (array[i] < array[m]); // 왼쪽에서 오른쪽으로 가면서 pivot보다 큰 것을 검색
+                do {
+                    j--;
+                } while (array[j] > array[m]); // 오른쪽에서 왼쪽으로 가면서 pivot보다 작은 것을 검색
+                if (i < j) { // 큰 값과 작은 값 교환
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
                 }
-            }
-            array[i] = num;
+            } while (i < j);
+            // 데이터가 엇갈릴 경우 array[j]에 pivot보다 작은 값이 들어있으므로 array[j]와 pivot(array[m])의 값을 교환
+            temp = array[j];
+            array[j] = array[m];
+            array[m] = temp;
+            // pivot을 기준으로 왼쪽과 오른쪽 부분 리스트로 나누어 위 과정을 반복
+            quickSort(array, m, j-1);
+            quickSort(array, j+1, n);
         }
-        /*
-        int left = 0;
-        int right = array.length - 1;
-
-        int lo = left;
-        int hi = right;
-        int pivot = array[0];
-
-        while (lo < hi) {
-            while (array[hi] > pivot && lo < hi) {
-                hi--;
-            }
-            while (array[lo] <= pivot && lo < hi) {
-                lo++;
-            }
-            temp = array[lo];
-            array[lo] = array[hi];
-            array[hi] = temp;
-        }
-        temp = array[left];
-        array[left] = array[lo];
-        array[lo] = temp;
-        */
+        return array;
     }
 
     @Override
     public void mergeSort() {
 
     }
-
+    /*
+     * author : 최은아
+     * */
     @Override
     public void magicSquare() {
         /**
@@ -115,6 +109,7 @@ public class Feb10ServiceImpl implements Feb10Service{
          * 3. 행은 감소하므로 첫 행보다 작아지는 경우에는 마지막 행으로 넘어간다.
          * 4. 열은 증가하므로 마지막 열보다 커지는 경우에는 첫 열로 넘어간다.
          * 5. 넣은 수가 n의 배수이면 행만 증가한다. 열은 변화가 없다.
+         * 참고) https://cbts.tistory.com/65
          * */
         int num;
         while (true) {
@@ -126,7 +121,6 @@ public class Feb10ServiceImpl implements Feb10Service{
 
         int array[][] = new int[num][num];
         int row, col;
-        int cnt;
         row = 0;
         col = num / 2; // 마방진은 1행 가운데 열에서부터 시작
 
@@ -154,14 +148,17 @@ public class Feb10ServiceImpl implements Feb10Service{
             }
             System.out.println();
         }
-
     }
-
+    /*
+     * author : 심민혜
+     * */
     @Override
     public void zigzag() {
 
     }
-
+    /*
+     * author : 권솔이
+     * */
     @Override
     public void rectangleStarPrint() {
 

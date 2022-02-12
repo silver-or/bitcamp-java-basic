@@ -15,6 +15,9 @@ import java.util.Scanner;
  * 2022-02-07    최은아       최초 생성
  */
 public class Feb07ServiceImpl implements Feb07Service {
+    /*
+     * author : 권솔이
+     * */
     @Override
     public void dice(Scanner scanner) {
         /**
@@ -31,7 +34,9 @@ public class Feb07ServiceImpl implements Feb07Service {
             }
         }
     }
-
+    /*
+     * author : 하진희
+     * */
     @Override
     public void rps(Scanner scanner) {
         Random random = new Random();
@@ -55,7 +60,9 @@ public class Feb07ServiceImpl implements Feb07Service {
         }
         System.out.println("컴퓨터 : " + str[com] + ", 유저 : " + str[user] + "\n" + s);
     }
-
+    /*
+     * author : 최은아
+     * */
     @Override
     public void getPrime(Scanner scanner) {
         /**
@@ -65,7 +72,8 @@ public class Feb07ServiceImpl implements Feb07Service {
          * 2부터 (입력받은 수 -1)까지 자기 자신보다 작은 수들을 나누어봐서, 하나라도 나누어지면 소수가 아니다.
          * 소수이면 flag = true, 소수가 아니면 flag = false
          * 소수 (flag == true) 이면 출력한다.
-         * 단점 : 연산 수가 많아 오래 걸림
+         * 단점 : 연산 수가 많아 오래 걸린다.
+         * 참고) https://hahahoho5915.tistory.com/14
          * */
         System.out.println("1 이상의 첫 번째 숫자를 입력해주세요.");
         int num1 = scanner.nextInt();
@@ -113,6 +121,8 @@ public class Feb07ServiceImpl implements Feb07Service {
          * 2) 2부터 시작해서 특정 수의 배수에 해당하는 수를 모두 지운다.(지울 때 자기자신은 지우지 않고, 이미 지워진 수는 건너뛴다.)
          *    이때, 소수가 아니면 (지우면) 0이다.
          * 3) 입력받은 수부터 시작하여 남아있는 수를 모두 출력한다.
+         *
+         * 참고) https://velog.io/@velogmj/%EC%97%90%EB%9D%BC%ED%86%A0%EC%8A%A4%ED%85%8C%EB%84%A4%EC%8A%A4%EC%9D%98-%EC%B2%B4
          * */
         System.out.println("# 방법 2.");
         s = "";
@@ -139,7 +149,9 @@ public class Feb07ServiceImpl implements Feb07Service {
         }
         System.out.println(s);
     }
-
+    /*
+     * author : 심민혜
+     * */
     @Override
     public void leapYear(Scanner scanner) {
         /**
@@ -180,7 +192,9 @@ public class Feb07ServiceImpl implements Feb07Service {
         System.out.println(s);
 
     }
-
+    /*
+     * author : 김지혜
+     * */
     @Override
     public void numberGolf() {
         Scanner scanner = new Scanner(System.in);

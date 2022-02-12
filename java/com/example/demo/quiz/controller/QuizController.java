@@ -172,7 +172,33 @@ public class QuizController {
                             break;
                         case "4" :
                             System.out.println("### 4. quickSort ###");
-                            feb10Service.quickSort();
+                            boolean duplicate;
+                            int num = 0;
+                            int[] array = new int[10];
+                            for (int i = 0 ; i < array.length; i++) {
+                                duplicate = true;
+                                while (duplicate) {
+                                    num = (int)(Math.random() * 100) + 1;
+                                    duplicate = false;
+                                    for (int j = 0; j < i; j++) {
+                                        if (array[j] == num) {
+                                            duplicate = true;
+                                            break;
+                                        }
+                                    }
+                                }
+                                array[i] = num;
+                            }
+                            System.out.print("퀵 정렬 전 데이터 : ");
+                            for (int i = 0; i < array.length; i++) {
+                                System.out.print(array[i] + " ");
+                            }
+                            System.out.println();
+                            array = feb10Service.quickSort(array, 0, array.length - 1);
+                            System.out.print("퀵 정렬 후 데이터 : ");
+                            for (int i = 0; i < array.length; i++) {
+                                System.out.print(array[i] + " ");
+                            }
                             break;
                         case "5" :
                             System.out.println("### 5. mergeSort ###");

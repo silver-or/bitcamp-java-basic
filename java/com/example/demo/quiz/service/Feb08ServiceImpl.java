@@ -15,6 +15,9 @@ import java.util.Scanner;
  * 2022-02-10    최은아       구구단 수정
  */
 public class Feb08ServiceImpl implements Feb08Service{
+    /*
+     * author : 하진희
+     * */
     @Override
     public void lotto(Scanner scanner) {
         int[] com = new int[6];
@@ -55,7 +58,9 @@ public class Feb08ServiceImpl implements Feb08Service{
                 break;
         }
     }
-
+    /*
+     * author : 최은아
+     * */
     @Override
     public void baseball(Scanner scanner) {
         /**
@@ -65,6 +70,7 @@ public class Feb08ServiceImpl implements Feb08Service{
          * 숫자와 위치가 전부 틀리면 아웃.
          * 무엇이 볼이고 스트라이크인지는 알려주지 않는다.
          * 두 숫자가 중복되면 경우의 수가 많아지므로 중복 숫자는 사용하지 않는다.
+         * 참고) https://velog.io/@suzu11/%EC%9E%90%EB%B0%94%EB%A1%9C-%EC%88%AB%EC%9E%90%EC%95%BC%EA%B5%AC-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0
          * */
         int[] com = new int[3];
         int[] user = new int[3];
@@ -142,7 +148,9 @@ public class Feb08ServiceImpl implements Feb08Service{
             }
         }
     }
-
+    /*
+     * author : 김지혜
+     * */
     @Override
     public void booking(Scanner scanner) {
         final int size = 10;//좌석 10자리
@@ -172,7 +180,9 @@ public class Feb08ServiceImpl implements Feb08Service{
         }
 
     }
-
+    /*
+     * author : 심민혜
+     * */
     @Override
     public void bank(Scanner scanner) {
         int money;
@@ -209,7 +219,9 @@ public class Feb08ServiceImpl implements Feb08Service{
             }
         }
     }
-
+    /*
+     * author : 권솔이
+     * */
     @Override
     public void gugudan(Scanner scanner) {
         for (int i = 2; i < 10; i+=4) {
