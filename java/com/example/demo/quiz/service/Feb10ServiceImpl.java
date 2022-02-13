@@ -63,7 +63,6 @@ public class Feb10ServiceImpl implements Feb10Service{
      * */
     @Override
     public int[] quickSort(int[] array, int m, int n) {
-        // ArrayIndexOutOfBoundsException 에러 발생하는 경우 존재, 해결방법 못 찾음
         // pivot은 m, 배열의 마지막 인덱스는 n
         int i, j, temp;
         if (m < n) {
@@ -72,10 +71,10 @@ public class Feb10ServiceImpl implements Feb10Service{
             do {
                 do {
                     i++;
-                } while (array[i] < array[m]); // 왼쪽에서 오른쪽으로 가면서 pivot보다 큰 것을 검색
+                } while (i <= n && array[i] < array[m]); // 왼쪽에서 오른쪽으로 가면서 pivot보다 큰 것을 검색
                 do {
                     j--;
-                } while (array[j] > array[m]); // 오른쪽에서 왼쪽으로 가면서 pivot보다 작은 것을 검색
+                } while (j > m && array[j] > array[m]); // 오른쪽에서 왼쪽으로 가면서 pivot보다 작은 것을 검색
                 if (i < j) { // 큰 값과 작은 값 교환
                     temp = array[i];
                     array[i] = array[j];
