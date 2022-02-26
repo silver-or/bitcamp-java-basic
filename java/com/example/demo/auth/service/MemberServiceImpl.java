@@ -42,7 +42,7 @@ public class MemberServiceImpl implements MemberService {
             result = "저체중";
         }
 
-        return String.format("%s님의 키 : %.2f 몸무게 : %.2f, bmi 지수는 %s입니다.", param.getName(), param.getTall(), param.getWeight(), result);
+        return String.format("%s님의 키 : %.2f 몸무게 : %.2f\nbmi 지수는 %.2f로, %s입니다.", param.getName(), param.getTall(), param.getWeight(), bmi, result);
     }
 
     @Override

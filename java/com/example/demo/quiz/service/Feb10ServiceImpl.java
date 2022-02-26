@@ -63,7 +63,7 @@ public class Feb10ServiceImpl implements Feb10Service{
      * */
     @Override
     public int[] quickSort(int[] array, int m, int n) {
-        // pivot은 m, 배열의 마지막 인덱스는 n
+        // pivot의 인덱스는 m, 배열의 마지막 인덱스는 n
         int i, j, temp;
         if (m < n) {
             i = m;
